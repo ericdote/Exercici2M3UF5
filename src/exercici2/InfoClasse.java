@@ -16,11 +16,11 @@ public class InfoClasse<T> {
     }
 
     public String getNomSuperClass() {
-        return t1.getClass().getSuperclass().getName();
+        return t1.getClass().getSuperclass().getSimpleName();
     }
 
     public String getNomClassComplet() {
-        return t1.getClass().toString();
+        return t1.getClass().getName();
     }
 
     public String getOnlyNomClass() {

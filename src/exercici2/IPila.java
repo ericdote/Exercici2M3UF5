@@ -2,7 +2,7 @@ package exercici2;
 
 public interface IPila<T> {
   
-    public void afegir();
+    public void afegir(T t);
     
     public T treure();
     

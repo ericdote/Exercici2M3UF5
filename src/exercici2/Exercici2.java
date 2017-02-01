@@ -6,7 +6,11 @@ public class Exercici2 {
 
 
     public static void main(String[] args) {
-        System.out.println("");
+        Pila pila = new Pila();
+        
+        pila.afegir(1);
+        pila.afegir(2);
+        System.out.println(pila.treure());
     }
     
 }
