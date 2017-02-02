@@ -8,8 +8,8 @@ public interface IPila<T> {
     
     public void buidar();
     
-    public T mida();
+    public int mida();
     
-    public T[] toArray();
+    public T[] toArray(Class<T> t);
     
 }

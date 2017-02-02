@@ -1,5 +1,6 @@
 package exercici2;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Pila<T> implements IPila<T> {
@@ -17,31 +18,37 @@ public class Pila<T> implements IPila<T> {
     public T treure() {
         T valor = null;
         if (node != null) {
-            valor = node.t;
+            valor = (T) node.t;
             node = node.pare;       
             mida--;
         } 
         return valor;
-    }
-
-   
+    }   
 
     @Override
     public void buidar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        node = null;
+        mida = 0;
     }
 
     @Override
-    public T mida() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int mida() {
+        return mida;    
     }
 
     @Override
-    public T[] toArray() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public T[] toArray(Class<T> t) {
+        T[] llista = (T[]) Array.newInstance(t, mida);
+        int x = mida; 
+        Node aux = node;        
+        while(aux != null){
+            llista[--x] = (T) aux.t;
+            aux = aux.pare;
+        }
+        return llista;
     }
 
-    private class Node {
+    private class Node<T> {
         Node pare;
         T t;
 
