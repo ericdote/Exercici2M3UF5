@@ -1,7 +1,6 @@
 package exercici2;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
 
 public class Pila<T> implements IPila<T> {
 
