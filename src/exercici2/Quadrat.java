@@ -12,25 +12,41 @@ package exercici2;
 public class Quadrat extends Figura{
     
     private double midaCostat;
-
+    /**
+     * Constructor de Quadrat
+     * @param midaCostat
+     * @param nom 
+     */
     public Quadrat(int midaCostat, String nom) {
         super(nom);
         this.midaCostat = midaCostat;
     }
-
+    /**
+     * Geter per la mida
+     * @return 
+     */
     public double getMidaCostat() {
         return midaCostat;
     }
-
+    /**
+     * Setter per la mida
+     * @param midaCostat 
+     */
     public void setMidaCostat(double midaCostat) {
         this.midaCostat = midaCostat;
     }
-    
+    /**
+     * Calcula l'area i la retorna
+     * @return 
+     */
     @Override
     public double area() {
         return Math.pow(midaCostat, 2);
     }
-
+    /**
+     * Calcula el perimetre i el retorna
+     * @return 
+     */
     @Override
     public double perimetre() {
         return 4*midaCostat;
